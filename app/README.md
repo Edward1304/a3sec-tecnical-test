@@ -1,6 +1,6 @@
 
 
-### Base de datos: events_abc_db
+# Base de datos: events_abc_db
 
 #### Herramienta de gestión: phpMyAdmin
 
@@ -51,17 +51,21 @@ CREATE TABLE events (
 #### Notas adicionales:
 
 - la configuracion es local, pero cambiadno los parametos de puerto y root de puede ejecutar donde se haga el despliegue.
-- 
 
 
 
 
+
+
+
+# Funcionamiento de la Aplicacion
+
+### Diagrama de Flujo
 
 ![Diagrama de flujo](static/images/flow.png)
 
 
 
-## Diagrama de flujo
 
 **Iniciar aplicación**
 
