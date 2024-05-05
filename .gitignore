@@ -1,0 +1,10 @@
+env/ 
+
+.evt
+
+__pycacbe__/
+
+*.py[cod]
+
+.pytest_cache/
+
