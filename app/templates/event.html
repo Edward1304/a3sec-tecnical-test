@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Group</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("#addButton").click(function(){
+        $("#addForm").toggle();
+      });
+      $("#editButton").click(function(){
+        $("#editForm").toggle();
+      });
+      $("#deleteButton").click(function(){
+        $("#deleteForm").toggle();
+      });
+    });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="landing">
+            <nav class="navbar">
+                <div class="navigation">
+                    <a href="#" class="logo">
+                        <span class="circle">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                        </span>
+                        <span class="logo-text">ABC Group</span>
+                    </a>
+                    <ul class="menu">
+                        <li><a href="/login/">Salir</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="banner">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>event_id</th>
+                            <th>Eventos</th>
+                            <th>Fecha</th>
+                            <th>Locación</th>
+                            <th>Modo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for event in events %}
+                        <tr>
+                            <td>{{ event.event_id }}</td>
+                            <td>{{ event.name }}</td>
+                            <td>{{ event.date }}</td>
+                            <td>{{ event.location }}</td>
+                            <td>{{ event.mode }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <div>
+                    <button id="addButton" type="button">Añadir</button>
+                    <button id="editButton" type="button">Editar</button>
+                    <button id="deleteButton" type="button">Eliminar</button>
+                </div>
+                <div id="editForm" style="display: none;">
+                    <form action="/update_event" method="post">
+                        <
+                        <div class="input-group">
+                            <input type="text" name="id" placeholder="ID del Evento" required>
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <button type="submit">Editar</button>
+                    </form>
+                </div>
+                <div id="deleteForm" style="display: none;">
+                    <form action="/delete_event" method="post">
+                        <div class="input-group">
+                            <input type="text" name="id" placeholder="ID del Evento" required>
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <button type="submit">Eliminar</button>
+                    </form>
+                </div>
+                <div id="addForm" style="display: none;">
+                    <form action="/add_event" method="post">
+                        <div class="input-group">
+                            <input type="text" name="name" placeholder="Nombre del Evento" required>
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="input-group">
+                            <input type="date" name="date" required>
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" name="location" placeholder="Locación" required>
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" name="mode" placeholder="Modo" required>
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <button class="contact-btn" type="submit">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>  
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ABC Group</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+        <link rel = "stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        
+        <link
+        href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    />
+    </head>
+    <body>
+        <div class= "container">
+            <div class = "landing">
+                    <nav class="navbar">
+                        <div class= "navigation">
+                            <a href= "#" class="logo">
+                                <span class="circle">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </span>
+                                <span class="logo-text">ABC Group</span>
+                            </a>
+                            <ul class="menu">
+                                <li><a href="/">Inicio</a></li>
+                                <li><a href="/login">Ingresar</a></li>
+                                <li><a href="/register">Registrarse</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="banner">
+                        <div class="form-container">
+                            <h1>Iniciar Sesión</h1>
+                            <form action="/login" method="post">
+                                <div class="input-group">
+                                    <input type="email"  name ="email" placeholder="Correo Electrónico" required>
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="input-group">
+                                    <input type="password" name ="password" placeholder="Contraseña" required>
+                                    <i class="fa-solid fa-lock"></i>
+                                </div>
+                                <button class="contact-btn" type="submit">Iniciar Sesión</button>
+                            </form>
+                        </div>
+                        <p class="event-title">¿No tienes una cuenta? <a href="/register/">Regístrate</a></p>
+                        
+                    </div>
+                    </div>
+                                       
+            </div>
+        </div>    
+        
+    
+    </body>
+</html>
