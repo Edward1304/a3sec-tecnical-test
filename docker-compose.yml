@@ -1,0 +1,23 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_ENV=development
+    
+    mysql:
+      image: mysql:5.2.1
+      environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: events_abc_db
+        MYSQL_USER: abc_group
+        MYSQL_PASSWORD: 123abc
+      ports:
+        - "3306:3306"
+
+
+  
