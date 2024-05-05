@@ -29,6 +29,7 @@
                                 <span class="logo-text">ABC Group</span>
                             </a>
                             <ul class="menu">
+                                <!-- Menú de navegación -->
                                 <li><a href="/">Inicio</a></li>
                                 <li><a href="/login/">Ingresar</a></li>
                                 <li><a href="/register/">Registrarse</a></li>
@@ -37,22 +38,28 @@
                     </nav>
                     <div class="banner">
                         <div class="form-container">
+                            <!-- Formulario para el registro -->
                             <h1>Registro</h1>
                             <form action="/register" method="post">
+                                <!-- Entrada de datos -->
                                 <div class="input-group">
                                     <input type="text" name="name" placeholder="Nombre Completo" required>
                                     <i class="fa-solid fa-user"></i>
                                 </div>
+                                <!-- Entrada de datos   para del Correo electronico-->
                                 <div class="input-group">
                                     <input type="email" name="email" placeholder="Correo Electrónico" required>
                                     <i class="fa-solid fa-envelope"></i>
                                 </div>
+                                <!-- Entrada de datos   para la contraseña-->
                                 <div class="input-group">
                                     <input type="password" name="password" placeholder="Contraseña" required>
                                     <i class="fa-solid fa-lock"></i>
                                 </div>
+                                <!-- Envio de los datos del formulario -->
                                 <button class="contact-btn" type="submit">Registrarse</button>
                             </form>
+                            <!-- Enclace para ir al login si ya se tiene una cuenta -->
                             <p class="event-title">¿Ya tiene una cuenta? <a href="/login/">Iniciar Sesion</a></p>
                         </div>
                         
@@ -60,7 +67,7 @@
                     </div>
             </div>
         </div>    
-        
+        <script src="/static/js/script.js"></script>
     
     </body>
 </html>

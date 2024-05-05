@@ -1,15 +1,15 @@
-version: '3'
+version: '3' # versiom del docker-compose
 services:
   web:
-    build: .
-    ports:
+    build: . #se contruye la imagen en el directorio actual done esta el dockerfile
+    ports: #maopeo de puertos entre el contenedor y el host
       - "5000:5000"
-    volumes:
+    volumes: #monta los archivos del host en el contenedor
       - .:/app
-    environment:
+    environment: # Define las variables de entorno
       - FLASK_ENV=development
     
-    mysql:
+    mysql:  #servicio de mysql que son de la base de datos qwue se va a usar
       image: mysql:5.2.1
       environment:
         MYSQL_ROOT_PASSWORD: root

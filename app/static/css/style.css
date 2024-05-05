@@ -91,8 +91,8 @@ p {
 
 
 table {
-  width: 200%; /* Make the table span the full width */
-  border-collapse: collapse; /* Remove default cell borders */
+  width: 200%; 
+  border-collapse: collapse;
   align-items: center;
   margin-left: auto;
   margin-left: auto;
@@ -106,8 +106,8 @@ table {
 }
 
  td {
-  border: 1px solid #1d90f5; /* Add borders to cells */
-  padding: 5px; /* Add padding for spacing */
+  border: 1px solid #1d90f5; 
+  padding: 5px; 
   background-color: white;
   font-style: italic;
   
@@ -138,27 +138,27 @@ table {
 }
 
 
-/* Estilo para los botones */
+
 button {
-padding: 5px 20px; /* Espaciado interno */
-margin: 10px; /* Espaciado externo */
-border: none; /* Sin borde */
-border-radius: 5px; /* Bordes redondeados */
-background-color: #007bff; /* Color de fondo */
-color: #fff; /* Color de texto */
-font-size: 16px; /* Tamaño de fuente */
-cursor: pointer; /* Cambiar el cursor al pasar por encima */
-transition: background-color 0.3s; /* Transición suave para el cambio de color de fondo */
+padding: 5px 20px;
+margin: 10px; 
+border: none; 
+border-radius: 5px; 
+background-color: #007bff; 
+color: #fff; 
+font-size: 16px;
+cursor: pointer; 
+transition: background-color 0.3s; 
 }
 
-/* Estilo cuando se pasa el ratón por encima */
+
 button:hover {
-background-color: #0056b3; /* Color de fondo más oscuro */
+background-color: #0056b3; 
 }
 
-/* Estilo para el botón de eliminar */
+
 button:active {
-background-color: #004286; /* Color de fondo más oscuro */
+background-color: #004286; 
 }
 
 

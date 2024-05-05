@@ -28,6 +28,7 @@
                                 </span>
                                 <span class="logo-text">ABC Group</span>
                             </a>
+                            <!-- Menú de navegación -->
                             <ul class="menu">
                                 <li><a href="/">Inicio</a></li>
                                 <li><a href="/login">Ingresar</a></li>
@@ -37,27 +38,32 @@
                     </nav>
                     <div class="banner">
                         <div class="form-container">
+                            <!-- Titulo  del login -->
                             <h1>Iniciar Sesión</h1>
+                            <!-- Formulario del login-->
                             <form action="/login" method="post">
+                                <!-- Entrada de  datos para el email -->
                                 <div class="input-group">
                                     <input type="email"  name ="email" placeholder="Correo Electrónico" required>
                                     <i class="fa-solid fa-envelope"></i>
                                 </div>
+                                <!-- Entrada de datos para ingresar la contraseña -->
                                 <div class="input-group">
                                     <input type="password" name ="password" placeholder="Contraseña" required>
                                     <i class="fa-solid fa-lock"></i>
                                 </div>
+                                <!-- Encio de los datos del Formulario -->
                                 <button class="contact-btn" type="submit">Iniciar Sesión</button>
                             </form>
                         </div>
+                        <!-- Enlace para Registrarse si no  se tiene una cuenta-->
                         <p class="event-title">¿No tienes una cuenta? <a href="/register/">Regístrate</a></p>
                         
                     </div>
-                    </div>
-                                       
+                    </div>                                    
             </div>
         </div>    
         
-    
+        <script src="/static/js/script.js"></script> 
     </body>
 </html>
